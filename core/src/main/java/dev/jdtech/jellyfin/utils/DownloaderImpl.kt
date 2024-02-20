@@ -84,11 +84,14 @@ class DownloaderImpl(
                     if (trickPlayManifest != null && trickPlayData != null) {
                         downloadTrickPlay(item, trickPlayManifest, trickPlayData)
                     }
-                    val request = DownloadManager.Request(source.path.toUri())
+                    // Construct the transcoding API request URL
+                    val transcodingUrl = "${jellyfinRepository.getBaseUrl()}/Videos/${item.id}/stream.mkv?static=false&Height=720&VideoCodec=h264"
+                    val request = DownloadManager.Request(transcodingUrl.toUri())
                         .setTitle(item.name)
                         .setAllowedOverMetered(appPreferences.downloadOverMobileData)
                         .setAllowedOverRoaming(appPreferences.downloadWhenRoaming)
                         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                        // Specify the destination URI for the transcoded file
                         .setDestinationUri(path)
                     val downloadId = downloadManager.enqueue(request)
                     database.setSourceDownloadId(source.id, downloadId)
@@ -113,11 +116,14 @@ class DownloaderImpl(
                     if (trickPlayManifest != null && trickPlayData != null) {
                         downloadTrickPlay(item, trickPlayManifest, trickPlayData)
                     }
-                    val request = DownloadManager.Request(source.path.toUri())
+                    // Construct the transcoding API request URL
+                    val transcodingUrl = "${jellyfinRepository.getBaseUrl()}/Videos/${item.id}/stream.mkv?static=false&Height=720&VideoCodec=h264"
+                    val request = DownloadManager.Request(transcodingUrl.toUri())
                         .setTitle(item.name)
                         .setAllowedOverMetered(appPreferences.downloadOverMobileData)
                         .setAllowedOverRoaming(appPreferences.downloadWhenRoaming)
                         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                        // Specify the destination URI for the transcoded file
                         .setDestinationUri(path)
                     val downloadId = downloadManager.enqueue(request)
                     database.setSourceDownloadId(source.id, downloadId)
