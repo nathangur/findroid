@@ -25,4 +25,28 @@
         <item>audiotrack</item>
         <item>opensles</item>
     </string-array>
+<string-array name="download_quality_options">
+    <item>Original</item>
+    <item>4K (40 Mbps)</item>
+    <item>4K (30 Mbps)</item>
+    <item>4K (25 Mbps)</item>
+    <item>1080p (20 Mbps)</item>
+    <item>1080p (12 Mbps)</item>
+    <item>1080p (8 Mbps)</item>
+    <item>720p (4 Mbps)</item>
+    <item>720p (3 Mbps)</item>
+    <item>720p (2 Mbps)</item>
+</string-array>
+<string-array name="download_quality_values">
+    <item>Original</item>
+    <item>4K_High</item>
+    <item>4K_Medium</item>
+    <item>4K_Low</item>
+    <item>1080p_High</item>
+    <item>1080p_Medium</item>
+    <item>1080p_Low</item>
+    <item>720p_High</item>
+    <item>720p_Medium</item>
+    <item>720p_Low</item>
+</string-array>
 </resources>
