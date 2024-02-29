@@ -15,15 +15,22 @@
         app:dialogTitle="@string/download_quality"
         app:entries="@array/download_quality_options"
         app:entryValues="@array/download_quality_values"
-        app:defaultValue="Original"
+        android:defaultValue="auto"
         app:useSimpleSummaryProvider="true"/>
     <SeekBarPreference
-        android:key="pref_download_size_limit"
-        android:title="@string/download_size_limit"
-        android:summary="@string/download_size_limit_summary"
+        android:key="pref_storage_size_limit"
+        android:title="@string/storage_size_limit"
+        android:summary="@string/storage_size_limit_summary"
         android:defaultValue="400"
         android:min="20"
         android:max="400"
         app:seekBarIncrement="1"
-        app:showSeekBarValue="false"/>
+        app:showSeekBarValue="false"
+        app:updatesContinuously="true"/>
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        app:key="pref_download_original"
+        app:title="@string/download_original"
+        android:summary="@string/download_original_summary" />
 </PreferenceScreen>
+

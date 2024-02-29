@@ -122,6 +122,21 @@ constructor(
         Constants.PREF_DOWNLOADS_ROAMING,
         false,
     )
+    var downloadQuality: String
+        get() = sharedPreferences.getString(Constants.PREF_DOWNLOAD_QUALITY, "auto")!!
+        set(value) = sharedPreferences.edit { putString(Constants.PREF_DOWNLOAD_QUALITY, value) }
+    var storageLimit: Int
+        get() = sharedPreferences.getInt(Constants.PREF_STORAGE_LIMIT, 100).let {
+            if (it == 400) Int.MAX_VALUE 
+            else it
+        }
+        set(value) = sharedPreferences.edit {
+            if (value == Int.MAX_VALUE) putInt(Constants.PREF_STORAGE_LIMIT, 400)
+            else putInt(Constants.PREF_STORAGE_LIMIT, value)
+        }
+    var downloadOriginal: Boolean
+        get() = sharedPreferences.getBoolean(Constants.PREF_DOWNLOAD_ORIGINAL, true)
+        set(value) = sharedPreferences.edit { putBoolean(Constants.PREF_DOWNLOAD_ORIGINAL, value) }
 
     // Sorting
     var sortBy: String

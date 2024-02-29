@@ -26,7 +26,7 @@
         <item>opensles</item>
     </string-array>
 <string-array name="download_quality_options">
-    <item>Original</item>
+    <item>Auto</item>
     <item>4K (40 Mbps)</item>
     <item>4K (30 Mbps)</item>
     <item>4K (25 Mbps)</item>
@@ -38,15 +38,15 @@
     <item>720p (2 Mbps)</item>
 </string-array>
 <string-array name="download_quality_values">
-    <item>Original</item>
-    <item>4K_High</item>
-    <item>4K_Medium</item>
-    <item>4K_Low</item>
-    <item>1080p_High</item>
-    <item>1080p_Medium</item>
-    <item>1080p_Low</item>
-    <item>720p_High</item>
-    <item>720p_Medium</item>
-    <item>720p_Low</item>
+    <item>auto</item>
+    <item>4K_high</item>
+    <item>4K_medium</item>
+    <item>4K_low</item>
+    <item>1080p_high</item>
+    <item>1080p_medium</item>
+    <item>1080p_low</item>
+    <item>720p_high</item>
+    <item>720p_medium</item>
+    <item>720p_low</item>
 </string-array>
 </resources>
