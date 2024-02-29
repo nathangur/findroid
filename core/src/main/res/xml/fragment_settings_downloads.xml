@@ -18,9 +18,9 @@
         android:defaultValue="auto"
         app:useSimpleSummaryProvider="true"/>
     <SeekBarPreference
-        android:key="pref_storage_size_limit"
-        android:title="@string/storage_size_limit"
-        android:summary="@string/storage_size_limit_summary"
+        app:key="pref_storage_size_limit"
+        app:title="@string/storage_size_limit"
+        app:summary="@string/storage_size_limit_summary"
         android:defaultValue="400"
         android:min="20"
         android:max="400"
